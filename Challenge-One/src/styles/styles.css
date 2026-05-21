@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Comment: Variable declaration. The video autor recommended it. */
+:root {
+  --black-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --purple-background-color: #6366f1;
+}
+
+/* Comment: "*{}" is like global on the CSS cascade. So this will affect pretty much everything that doesn't have a more specific selector  */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Comment: This one will obviously affect the body tag. */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Point of Improvement: I have to study more about CSS metrics */
+    background-color: var(--purple-background-color);
+}
+
+/* Comment: starting with "." means that this class will be selected  */
+.btn-default {
+    background-color: var(--purple-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500; /* Comment: Font weight is like "normal" and "bold" but in this case we are using numeric metric. */
+    color: #ffffff;
+    cursor: pointer;
+    gap: 8px;
+    height: fit-content;
+    box-shadow: var(--black-box-shadow);
+    transition: background-color 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: #818cf8;
+}
+
+/* Comment: Starting with # means that it will select by the id */
+#form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 100%;
+    background-color: #f6f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+#form-header {
+    display: flex;
+    justify-content: space-between; /* Comment: Didn't know this one, but based on the docs, it literally puts a space to separate two elements */
+    align-items: center;
+}
+
+#form-title {
+    font-weight: 500;
+    color: #272727;
+    position: relative;
+}
+
+/* Comment: This "after" basically insert a "child" element after the current element. You can use this to insert an extra text, for example. */
+/* Question; It ins't work. Gonna the why later */
+#form-title::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: var(--purple-background-color);
+    left: 0;
+    bottom: 0;
+}
+
+#form {
+    display: flex;
+    justiify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+    height: 100%;    
+}
+
+#input-container {
+    display: grid;
+    gap: 24px;
+}
+
+.form-Label {
+    font-size: 12px;
+    color: var(--black-box-shadow);
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 8px;  
+}
+
+/* Comment: "i" stands for icon, we are changing the input icon. */
+.input-field i {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+}
+
+.form-control {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Comment: Very specific selector, going straigth to the password icon hover */
+.input-field .password-icon:hover {
+    cursor: pointer;
+    color: #676770;
+}
+
+/* Comment: I really don't like the order of the elements of this girl (video author), even on the CSS */
+.form-control:focus{
+    outline: none;
+}
+
+.input-box .input-field:focus-within {
+    outline: 2px solid var(--purple-background-color);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    color: #000;
+}
+
+.radio-container {
+    /* Point of Improvement: Study more about usage of grid */
+    grid-column: span 2;
+}
+
+#gender-inputs {
+    display: flex;
+    gap: 20px
+}
+
+.radio-box {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+/* Comment: Very specific changing the type radio inside class form-control */
+.form-control[type="radio"] {
+    accent-color: var(--purple-background-color);
+}
+
+/* Comment: Some configuration depend on the device screen size.  */
+@media screen and (max-width: 500px) {
+    #form-container {
+        width: 100%;
+        min-height: 100vh;
+        padding: 32px;
+    }
+
+    #input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .form-control[type="date"] {
+        background-color: #fff;
+    }
+}

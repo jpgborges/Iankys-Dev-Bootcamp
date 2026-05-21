@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="src/styles/styles.css">
+    <title>Sign up</title>
+</head>
+
+<!-- Comment: I used vscode's "Format Document". -->
+
+<body>
+    <main id="form-container">
+        <div id="form-header">
+            <h1>Sign up</h1>
+            <button class="btn-default">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+        </div>
+        <form action=""
+            id="form">
+            <div id="input-container">
+                <div class="input-box">
+                    <label for="firstName"
+                        class="form-label">First Name</label>
+                    <div class="input-field">
+                        <!-- Comment: I don't really like the way the tutorial order the attributes, but whatever for now.                      -->
+                        <input type="text"
+                            name="firstName"
+                            id="firstName"
+                            class="form-control"
+                            placeholder="John">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="lastName"
+                        class="form-label">Second Name</label>
+                    <div class="input-field">
+                        <input type="text"
+                            name="secondName"
+                            id="secondName"
+                            class="form-control"
+                            placeholder="Doe">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="lastName"
+                        class="form-label">Birthdate</label>
+                    <div class="input-field">
+                        <input type="date"
+                            name="birthdate"
+                            id="birthdate"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="email"
+                        class="form-label">E-mail</label>
+                    <div class="input-field">
+                        <input type="email"
+                            name="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="example@gmail.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="password"
+                        class="form-label">Password</label>
+                    <div class="input-field">
+                        <input type="password"
+                            name="password"
+                            id="password"
+                            class="form-control"
+                            placeholder="******">
+                        <i class="fa-regular fa-eye-slash password-icon"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="confirmPassword"
+                        class="form-label">Confirm Password</label>
+                    <div class="input-field">
+                        <input type="password"
+                            name="confirmPassword"
+                            id="confirmPassword"
+                            class="form-control"
+                            placeholder="******">
+                        <i class="fa-regular fa-eye-slash password-icon"></i>
+                    </div>
+                </div>
+                <div class="radio-container">
+                    <label class="form-label">Gender</label>
+                    <div id="gender-inputs">
+                        <div class="radio-box">
+                            <input type="radio"
+                                name="gender"
+                                id="female"
+                                class="form-control"
+                                value="female">
+                            <label for="female"
+                                class="form-label">Female</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio"
+                                name="gender"
+                                id="male"
+                                class="form-control"
+                                value="male">
+                            <label for="male"
+                                class="form-label">Male</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio"
+                                name="gender"
+                                id="other"
+                                class="form-control"
+                                value="other">
+                            <label for="other"
+                                class="form-label">Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit"
+                class="btn-default">
+                <i class="fa-solid fa-check"></i>Sign up
+            </button>
+        </form>
+    </main>
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
