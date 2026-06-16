@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper, Rock, Scissors</title>
+</head>
+<body>
+    <header>
+        <h1>Paper, Rock, Scissors... with Yujiro Hanma!</h1>
+        <img src="https://i.ytimg.com/vi/noUL9xPvWA8/maxresdefault.jpg" height="350" width="600">
+    </header>
+    <main>
+        <div id="game-container">
+            <form id="game-form" action="">
+                <label for="nickname">Enter your nickname:</label>
+                <input type="text" name="nickname" id="nickname" maxlength="10">
+                <div id="radio-game-form">
+                    <input type="radio" id="paper" name="game-option" value="paper" />
+                    <label for="paper">Paper</label>
+                    <input type="radio" id="rock" name="game-option" value="rock" />
+                    <label for="rock">Rock</label>
+                    <input type="radio" id="scissors" name="game-option" value="scissors" />
+                    <label for="scissors">Scissors</label>
+                </div>
+                <button type="submit">Play</button>
+            </form>
+            <div id="result">
+                <p id="result-message"></p>
+            </div>
+        </div>
+    </main>
+    <script src="javascript/script.js"></script>    
+</body>
+</html>
